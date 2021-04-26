@@ -18,38 +18,40 @@
             <form action="" method="post">
                 <div class="section">
                     <label for="name">Enter your name:</label>
-                    <input type="text">
+                    <input type="text" required>
                 </div>
                 <div class="section">
                     <label for="name">Enter your last name:</label>
-                    <input type="text">
+                    <input type="text" required>
                 </div>
                 <div class="section">
                     <label for="name">Enter your DNI:</label>
-                    <input type="text">
+                    <input type="number" required>
                 </div>
                 <div class="section">
                     <label for="name">Enter your email:</label>
-                    <input type="text">
+                    <input type="email" required>
                 </div>
                 <div class="section">
                     <label for="name">Enter your phone:</label>
-                    <input type="text">
+                    <input type="phone" required>
                 </div>
                 <div class="section">
                     <label for="name">Select an insurance type:</label>
                     <select name="insurance" id="insurance">
-                        <option value="selectInsurance" disabled>Insurance types:</option>
+                        <option value="selectInsurance" selected="true" disabled>Insurance types:</option>
                         <option value="basic">Basic</option>
                         <option value="intermediate">Intermediate</option>
                         <option value="premium">Premium</option>
                     </select>
-                    <p>The price for the "Basic" plan is: $4000 </p>
+                    <p class="textPrice">The price for the "Basic" plan is: $4000 </p>
                 </div>
                 <button class="button" type="submit">Submit form</button>
             </form>
         </div>
     </main>
     
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
