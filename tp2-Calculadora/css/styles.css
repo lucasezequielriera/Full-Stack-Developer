@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "system-ui";
+  background-color: whitesmoke;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+#calculadoraSection {
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  height: 100vh;
+  margin: auto;
+  align-items: center;
+}
+#calculadoraSection .cajaCalculadora {
+  background-color: #797979;
+  width: 400px;
+  height: 400px;
+  box-shadow: 0px 0px 20px #636363;
+  border-radius: 10px;
+}
+#calculadoraSection .cajaCalculadora .parteSuperior {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#calculadoraSection .cajaCalculadora .parteSuperior .visor {
+  width: 95%;
+  height: 80%;
+  border: 1px solid transparent;
+  background-color: lightgreen;
+  border-radius: 6px;
+  box-shadow: 0px 0px 5px black;
+  overflow: hidden;
+}
+#calculadoraSection .cajaCalculadora .parteSuperior .visor h1 {
+  text-align: left;
+  line-height: 75px;
+  font-size: 40px;
+  padding-left: 5px;
+  font-weight: 200;
+}
+#calculadoraSection .cajaCalculadora .parteInferior {
+  width: 95%;
+  margin: auto;
+  height: 300px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+#calculadoraSection .cajaCalculadora .parteInferior .columna {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+#calculadoraSection .cajaCalculadora .parteInferior .columna button {
+  width: 90px;
+  height: 70px;
+  font-size: 40px;
+  align-items: center;
+  line-height: 65px;
+  background-color: #dbdbdb;
+  box-shadow: 0px 0px 5px black;
+  margin: 2px;
+}
+
+/*# sourceMappingURL=styles.css.map */
