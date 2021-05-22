@@ -1,0 +1,15 @@
+/* Vista de Registro */
+
+.formulario {
+    margin-top: 20vh;
+}
+
+.formulario h1 {
+    margin-bottom: 10px;
+}
+
+.formulario .input-group-text {
+    min-width: 165px;
+}
+
+/* ------------------ */
