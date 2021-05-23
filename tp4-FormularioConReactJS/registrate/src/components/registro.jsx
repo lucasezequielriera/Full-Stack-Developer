@@ -36,7 +36,7 @@ const Formulario = () => {
         <div className="container formulario text-center p-3 shadow rounded bg-light bg-gradient">
             <div className="container">
                 <h1 className="fw-light">¡Registrate con nosotros!</h1>
-                <form className="row">
+                <form onSubmit={Validacion} className="row">
                     <div className="input-group flex-nowrap mb-2">
                         <span className="input-group-text" id="addon-wrapping">Nombre</span>
                         <input type="text" className="form-control" placeholder="Ingresa tu nombre completo" aria-label="Username" aria-describedby="addon-wrapping" onChange={(e) => setNombre(e.target.value)} />
@@ -61,7 +61,7 @@ const Formulario = () => {
                         <span className="input-group-text" id="addon-wrapping">Confirmar Password</span>
                         <input type="password" className="form-control" placeholder="Vuelve a escribir la contraseña" aria-label="Username" aria-describedby="addon-wrapping" onChange={(e) => setRePassword(e.target.value)} />
                     </div>
-                    <input className="btn btn-success" type="submit" value="Enviar Formulario" onClick={Validacion}/>
+                    <input className="btn btn-success" type="submit" value="Enviar Formulario" />
                 </form>
             </div>
         </div>
