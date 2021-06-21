@@ -1,9 +1,0 @@
-.inicio {
-    width: 100%;
-    height: calc(100vh - 53px);
-}
-.inicio h1 {
-    padding-top: 30px;
-    text-align: center;
-    font-weight: 200;
-}

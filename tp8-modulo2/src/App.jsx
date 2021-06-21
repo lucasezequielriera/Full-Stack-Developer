@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './assets/css/App.css';
 import Navbar from './components/Navbar';
-import RegisterForm from './components/Register/RegisterForm';
-import LoginForm from './components/Login/LoginForm';
-import Inicio from './components/Inicio/Inicio';
-import DetalleProductos from './components/DetalleProductos/DetalleProductos';
+import RegisterForm from './Pages/Register/RegisterForm';
+import LoginForm from './Pages/Login/LoginForm';
+import Inicio from './Pages/Inicio/Inicio';
+import DetalleProductos from './Pages/DetalleProductos/DetalleProductos';
 
 export default function App() {
   return (
