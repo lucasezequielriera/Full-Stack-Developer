@@ -26,12 +26,12 @@
 }
 
 .login-form input:focus {
-    border: 2px solid red !important;
+    width: 55% !important;
     outline: none;
 }
 
-.login-form input[type='button'] {
-    background-color: red;
+.login-form input[type='submit'] {
+    background-color: rgb(10, 202, 68);
     padding: 10px;
     width: 50%;
     border-radius: 4px;
@@ -41,7 +41,7 @@
     color: white;
 }
 
-.login-form input[type='button']:hover {
+.login-form input[type='submit']:hover {
     background-color: white;
-    color: red;
+    color: black;
 }

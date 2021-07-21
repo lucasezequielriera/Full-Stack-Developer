@@ -9,7 +9,7 @@ export default function LoginForm() {
             <label htmlFor=""></label>
             <input type="text" placeholder="Ingresa tu contraseña"/>
             <label htmlFor=""></label>
-            <input type="button" value="Enviar" />
+            <input type="submit" value="Enviar" />
         </div>
     )
-} 
+}

@@ -15,7 +15,7 @@ export default function RegisterForm() {
             <label htmlFor=""></label>
             <input type="text" placeholder="Ingresa nuevamente la contraseña"/>
             <label htmlFor=""></label>
-            <input type="button" value="Enviar" />
+            <input type="submit" value="Enviar" />
         </div>
     )
 } 
