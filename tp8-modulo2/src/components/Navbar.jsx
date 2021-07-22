@@ -13,6 +13,9 @@ export default function Navbar() {
                         <li className="nav-item">
                             <Link to='./' className="nav-link active" aria-current="page">Inicio</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link to='./AgregarProductos' className="nav-link" aria-current="page">Agregar productos</Link>
+                        </li>
                     </ul>
                 <form className="d-flex">
                     <Link to="./Registrate" className="nav-link">Registrate</Link>

@@ -5,6 +5,7 @@ import RegisterForm from './pages/Register/RegisterForm';
 import LoginForm from './pages/Login/LoginForm';
 import Inicio from './pages/Inicio/Inicio';
 import DetalleProductos from './pages/DetalleProductos/DetalleProductos';
+import AgregarProductos from './pages/AgregarProductos/AgregarProductos';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
             <Route exact path='/'><Inicio /></Route>
             <Route exact path='/Login'><LoginForm /></Route>
             <Route exact path='/Registrate'><RegisterForm /></Route>
+            <Route exact path='/AgregarProductos'><AgregarProductos /></Route>
             <Route exact path='/:id'><DetalleProductos /></Route>
           </Switch>
         </Router>

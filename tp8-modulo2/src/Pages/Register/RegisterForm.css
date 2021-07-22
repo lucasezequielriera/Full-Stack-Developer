@@ -11,12 +11,18 @@
     font-weight: 200;
 }
 
+.register-form form {
+    display: flex;
+    flex-direction: column;
+}
+
 .register-form input {
     padding: 5px 5px;
     width: 50%;
     margin: auto;
     margin-top: 10px;
     transition: all .5s;
+    font-weight: 300;
 }
 
 .register-form input::placeholder {
