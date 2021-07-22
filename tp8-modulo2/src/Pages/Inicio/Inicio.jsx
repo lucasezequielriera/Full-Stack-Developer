@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import './Inicio.css';
 import firebase from '../../config/firebase';
-import { getProductos } from '../../services/ItemServices';
+// import { getProductos } from '../../services/ItemServices';
 
 export default function Inicio() {
 
