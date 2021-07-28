@@ -17,7 +17,8 @@ const AgregarProductos = () => {
         event.preventDefault();
         console.log("HandleSubmit", producto)
         try {
-            const productoNuevo = await firebase.db.collection("productos").add(producto)
+            const productoNuevo = await firebase.db.collection("productos")
+            .add(producto)
             console.log(productoNuevo)
         } catch(error) {
             console.log("Error", error)

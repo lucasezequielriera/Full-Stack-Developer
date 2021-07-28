@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
 import './Inicio.css';
 import firebase from '../../config/firebase';
+import Producto from '../../components/Producto';
 // import { getProductos } from '../../services/ItemServices';
 
 export default function Inicio() {
 
     const [datos, setDatos] = useState([]);
+    const [reload, setReload] = useState(false);
 
     // useEffect(() => {
     //     // Fetch con service //
@@ -26,13 +27,14 @@ export default function Inicio() {
             try {
                 const productos = await firebase.db.collection("productos").get()
                 setDatos(productos.docs)
-                console.log(productos.docs)
+                setReload(true)
+                // Loading(false) Esto se hace para que inicie en "true" y cuando se termina la consulta, se pone el "false" //
             } catch(error) {
                 console.log("error", error)
             }
         }
         traerProductos()
-    }, [])
+    }, [reload])
     console.log(datos)
 
     if (datos.length >= 1) {
@@ -42,14 +44,7 @@ export default function Inicio() {
                 <h4>Estos son los productos que tenemos para ofrecerte</h4>
                 <ul className="productos d-flex">
                     {
-                        datos.map(producto => (
-                        <li key={producto.id} className="producto mx-5">
-                            <p><img src={producto.data().imagen} alt="imagen"/></p>
-                            <p><strong>{producto.data().nombre}</strong></p>
-                            <p>Descripción: {producto.data().descripcion}</p>
-                            <Link to={`./${producto.id}`}><p>Precio: <strong>${producto.data().precio}</strong></p></Link>
-                        </li>
-                        ))
+                        datos.map(producto => <Producto datos={{ ...producto.data(), id:producto.id }} modificar={true} />)
                     }
                 </ul>
             </div>
