@@ -44,7 +44,7 @@ export default function Inicio() {
                 <h4>Estos son los productos que tenemos para ofrecerte</h4>
                 <ul className="productos d-flex">
                     {
-                        datos.map(producto => <Producto datos={{ ...producto.data(), id:producto.id }} modificar={true} />)
+                        datos.map(producto => <Producto datos={{ ...producto.data(), id:producto.id }} key={producto.id} />)
                     }
                 </ul>
             </div>
