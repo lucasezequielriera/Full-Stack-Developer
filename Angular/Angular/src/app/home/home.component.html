@@ -1,0 +1,8 @@
+<p>home works!</p>
+
+<!-- Usando la variable clase desde el home.component.ts -->
+{{title}}
+<button (click)="cambiarTitle()" [disabled]="modificado">Cambiar titulo</button>
+<input type="text" [(ngModel)]="title">
+
+<app-menu></app-menu>
