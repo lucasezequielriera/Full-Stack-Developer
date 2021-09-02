@@ -1,0 +1,12 @@
+<form class="container-fluid form border" [formGroup]="myForm">
+    <h1 class="text-center fw-lighter mt-4">Formulario de Ingreso</h1>
+    <div>
+        <label for="">Email</label>
+        <input type="email" formControlName="email">
+    </div>
+    <div>
+        <label for="">Password</label>
+        <input type="password" formControlName="password">
+    </div>
+    <input class="mt-3" type="submit" value="Ingresar">
+</form>

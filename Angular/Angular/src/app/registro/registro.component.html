@@ -1,0 +1,30 @@
+<form class="container-fluid form border mt-4" [formGroup]="myForm" (ngSubmit)="registrarse()">
+    <h1 class="text-center fw-lighter mt-4">Formulario de Registro</h1>
+    <div>
+        <label for="">Nombre</label>
+        <input type="text" formControlName="name">
+        <p class="text-danger" *ngIf="myForm.get('name')?.errors && myForm.get('name')?.dirty">El campo es obligatorio</p>
+    </div>
+    <div>
+        <label for="">Apellido</label>
+        <input type="text" formControlName="lastName">
+        <p class="text-danger" *ngIf="myForm.get('lastName')?.errors && myForm.get('lastName')?.dirty">El campo es obligatorio</p>
+    </div>
+    <div>
+        <label for="">Teléfono</label>
+        <input type="number" formControlName="phone">
+    </div>
+    <div>
+        <label for="">Email</label>
+        <input type="email" formControlName="email">
+        <p class="text-danger" *ngIf="myForm.get('email')?.errors && myForm.get('email')?.dirty">El campo es obligatorio</p>
+    </div>
+    <div>
+        <label for="">Password</label>
+        <input type="password" formControlName="password" [ngClass]="{error: myForm.get('password')?.hasError('required') && myForm.get('password')?.dirty, warning: myForm.get('password')?.hasError('minlength') && myForm.get('password')?.hasError('maxlength') && myForm.get('password')?.dirty}">
+        <p class="text-danger" *ngIf="myForm.get('password')?.hasError('required')">El campo es obligatorio</p>
+        <p class="text-warning" *ngIf="myForm.get('password')?.hasError('minlength')">Minimo 6 caracteres</p>
+        <p class="text-warning" *ngIf="myForm.get('password')?.hasError('maxlength')">Máximo 10 caracteres</p>
+    </div>
+    <input type="submit" value="Registrarse" [disabled]="myForm.invalid">
+</form>

@@ -1,8 +1,12 @@
-<p>home works!</p>
-
-<!-- Usando la variable clase desde el home.component.ts -->
-{{title}}
-<button (click)="cambiarTitle()" [disabled]="modificado">Cambiar titulo</button>
-<input type="text" [(ngModel)]="title">
-
-<app-menu></app-menu>
+<div class="container-fluid mb-4 border">
+    <!-- Usando la variable clase desde el home.component.ts -->
+    <div class="mt-4 text-center">
+        <h1 class="fw-lighter">Hola <span [ngClass]="{sobrepasado:nombrePersona.length>=8, bien:nombrePersona.length<=7}">{{ title }}</span>!</h1>
+    </div>
+    <div class="mt-4">
+        <form>
+            <button (click)="cambiarTitle()" [disabled]="modificado">Ingresar</button>
+            <input type="text" placeholder="Escriba su nombre" [(ngModel)]="title" (keyup)="onKey($event)">
+        </form>
+    </div>
+</div>
