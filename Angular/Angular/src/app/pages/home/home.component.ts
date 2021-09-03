@@ -1,5 +1,5 @@
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
+import { ProductosService } from '../../services/productos.service';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +11,21 @@ export class HomeComponent implements OnInit {
   title = 'Usuario'
   modificado = false
   // classNameIngresado = ''
-  constructor() { }
+
+  productos:any=[]
+
+  constructor(private productosService:ProductosService) {
+    // this.productos = this.productosService.getAllPromise()
+    // .subscribe(data=>{
+    //   console.log("data", data)
+    //   this.productos = data
+    // })
+    this.getProductos()
+  }
+
+  async getProductos() {
+      this.productos = await this.productosService.getAll()
+  }
 
   onKey(event: any) {
     this.nombrePersona = event.target.value;
@@ -26,6 +40,8 @@ export class HomeComponent implements OnInit {
   cambiarTitle() {
     this.modificado = false
   }
+
+  
 
   ngOnInit(): void {}
 

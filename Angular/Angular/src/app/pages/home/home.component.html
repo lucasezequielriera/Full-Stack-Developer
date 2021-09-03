@@ -10,3 +10,19 @@
         </form>
     </div>
 </div>
+
+<div class="container-fluid">
+    <h1 class="text-center fw-lighter">Productos</h1>
+
+    <div *ngFor="let producto of productos">
+        <div class="d-flex flex-column" style="align-items: center">
+            <hr>
+            <img src="{{ producto.photo_url }}" width="200px">
+            <p>Nombre del producto: {{ producto.name }}</p>
+            <p>Precio del producto: ${{ producto.price }}</p>
+            <button class="btn btn-success" routerLink="/productos/{{ producto.id }}">Ver detalle</button>
+            <hr>
+        </div>
+    </div>
+    
+</div>
