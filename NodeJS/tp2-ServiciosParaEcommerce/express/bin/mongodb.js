@@ -1,4 +1,5 @@
 var mongoose = require("mongoose");
+var mongoosePaginate = require('mongoose-paginate-v2');
 
 mongoose.connect('mongodb://localhost/database-utn', { useNewUrlParser: true }, function (error) {
     if (error) {
@@ -8,4 +9,5 @@ mongoose.connect('mongodb://localhost/database-utn', { useNewUrlParser: true }, 
     }
 });
 
+mongoose.mongoosePaginate  = mongoosePaginate;
 module.exports = mongoose;

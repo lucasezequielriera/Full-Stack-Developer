@@ -11,6 +11,25 @@ module.exports = {
             next(e)
         }
     },
+    getAllPaginate: async function(req, res, next) {
+        try {
+            let queryFind = {}
+            if(req.query.buscar){
+                queryFind = {
+                    name: {$regex:".*"+req.query.buscar+".*",$options:"i"} // cualquier palabra que pongo, la busca en productos (expresiones regulares) y con "option" dehbailida la key sensitive (mayúsculas y minúsculas //
+                }
+            }
+            const productos = await productosModel.paginate(queryFind, {
+                sort:{name: 1, sku: -1, description: 1},
+                populate:"category",
+                limit: req.query.limit || 2, // url con ?limit=2 //
+                page: req.query.page || 1 // url con ?limit=3&page=4 //
+            })
+            res.json(productos)
+        } catch(e) {
+            next(e)
+        }
+    },
     getById: async function(req, res, next) {
         try {
             const producto = await productosModel.findById(req.params.id)

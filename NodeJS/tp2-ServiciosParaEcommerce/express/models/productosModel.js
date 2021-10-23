@@ -51,4 +51,6 @@ productosSchema.virtual("price_currency").get(function() {
 // Usar .get, .set y .virtual //
 productosSchema.set("toJSON", { getters: true, setters: true, virtuals: true })
 
+productosSchema.plugin(mongoose.mongoosePaginate)
+
 module.exports = mongoose.model("productos", productosSchema)
